@@ -16,7 +16,7 @@ class ChargesController < ApplicationController
 		charge = Stripe::Charge.create(
 			:customer     => customer.id,
 			:amount       => @amount,
-			:description  => 'Rails Stripe Customer',
+			:description  => 'Donation to Admin',
 			:currency     => 'usd'
 		)
 
@@ -24,4 +24,5 @@ class ChargesController < ApplicationController
 			flash[:error] = e.message
 			redirect_to new_charge_path
 		end
+
 	end
