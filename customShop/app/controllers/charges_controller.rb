@@ -32,3 +32,6 @@ class ChargesController < ApplicationController
 		end
 
 	end
+
+	def index
+	end
