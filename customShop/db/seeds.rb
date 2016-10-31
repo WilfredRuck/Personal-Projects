@@ -7,5 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.create!(
-{name: "Paperclip", description: "A metal band that keeps your documents together", price: 5}
-	)
+	{name: "Paperclip", description: "A metal band that keeps your documents together", price: 5},
+)
+
+Product.create!(
+	{name: "car", description: "Automobile that gets you around the city", price: 5000}
+)
+
+Product.create!(
+	{name: "Moto 360 Watch", description: "An automated watch that pairs with your android phone", price: 320}
+)
+
+Product.create!(
+	{name: "Ipad", description: "An Apple product that serves as a iphone companion with a huge screen", price: 450}
+)
