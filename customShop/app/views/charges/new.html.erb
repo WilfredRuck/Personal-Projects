@@ -32,9 +32,11 @@
 <br>
 
 
-<form>
+<form action="/charges/new">
 	<p> Input new amount: 
 		<input type="number" name="newAmount">
+
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 	
 		<input type="submit">
 		(Minimum $0.50)
