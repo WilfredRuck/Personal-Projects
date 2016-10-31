@@ -1,5 +1,9 @@
 class ChargesController < ApplicationController
 
+	def home
+		@paper = 4
+	end
+
 	def new
 	end
 
