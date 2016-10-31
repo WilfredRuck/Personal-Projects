@@ -1,7 +1,7 @@
 class ChargesController < ApplicationController
 
 	def home
-		@paper = 4
+		@products = Product.all
 	end
 
 	def new
