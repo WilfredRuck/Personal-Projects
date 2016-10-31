@@ -1,44 +1,47 @@
-<%= form_tag charges_path do %>
-	<article>
-		<% if flash[:error].present? %>
+<div class="centerAll">
+	<%= form_tag charges_path do %>
+		<article>
+			<% if flash[:error].present? %>
+			
+				<div id="error_explanation">
+					<p> <%= flash[:error] %> </p>
+				</div>
+
+			<% end %>
+			
+			<label class="amount">
+				<span> Amount: $0.50 </span>
+				<%= @newAmount%>
+				<p> (if you would like to change this amount, enter the new amount at the bottom) </p>
+			</label>
+		</article>
+
+		<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+		data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+		data-description="Single Donation to Admin"
+		data-amount="50"
+		data-locale="auto">
+		</script>
+	<% end %>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+	<form action="/charges/new">
+		<p> Input new amount: 
+			<input type="number" name="newAmount">
+
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 		
-			<div id="error_explanation">
-				<p> <%= flash[:error] %> </p>
-			</div>
+			<input type="submit">
+			(Minimum $0.50)
+		</p>
+	</form>
 
-		<% end %>
-		
-		<label class="amount">
-			<span> Amount: $0.50 </span>
-			<%= @newAmount%>
-			<p> (if you would like to change this amount, enter the new amount at the bottom) </p>
-		</label>
-	</article>
-
-	<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-	data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-	data-description="Single Donation to Admin"
-	data-amount="50"
-	data-locale="auto">
-	</script>
-<% end %>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<form action="/charges/new">
-	<p> Input new amount: 
-		<input type="number" name="newAmount">
-
-		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-	
-		<input type="submit">
-		(Minimum $0.50)
-	</p>
-</form>
+</div>
