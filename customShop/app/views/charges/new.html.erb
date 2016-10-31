@@ -10,7 +10,8 @@
 		
 		<label class="amount">
 			<span> Amount: $0.50 </span>
-			<p> if you would like to increase this amount, enter the new amount at the bottom</p>
+			<%= @newAmount%>
+			<p> (if you would like to change this amount, enter the new amount at the bottom) </p>
 		</label>
 	</article>
 
@@ -36,5 +37,6 @@
 		<input type="number" name="newAmount">
 	
 		<input type="submit">
+		(Minimum $0.50)
 	</p>
 </form>
