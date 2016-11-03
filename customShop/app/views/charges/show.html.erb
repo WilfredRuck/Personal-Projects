@@ -1,16 +1,9 @@
+<h1>Product Details</h1>
 
-<% if @product.nil? %>
-	 No product with that ID has been found.
-<% else %>
- <!-- Contents of your current show.html.erb -->
-	<h1>Product Details</h1>
+<h3> <%= @product.name %> </h3>
+<h4> <%= @product.price %> </h4>
+<h5> <%= @product.description %> </h5>
 
-	<h2> <%= @product.name %> </h2>
-	<h3> <%= @product.price %> </h3>
-
-	<h5> <%= @product.description %> </h5>
-
-<% end %>
 
 
 
