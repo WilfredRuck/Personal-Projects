@@ -32,7 +32,8 @@ class ChargesController < ApplicationController
 	end
 
 	def show
-		@product = Product.find_by(id: params[:id])
+		raise params.inspect
+  		@product = Product.find params[:id]
 	end
 		
 	def index
