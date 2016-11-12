@@ -5,8 +5,9 @@
 
 		<p> <%= product.name %>: $<%= product.price %> </p>
 		<p> <%= product.description %> </p>
-<!-- 		<%= product.id %>
- -->		<%= button_to "Product Details", charge_path(id: product.id), :method => "get" %>
+<!-- 		<%= product.id %> -->		
+		<button> Product Details </button>
+	<!--	<%= button_to "Product Details", charge_path(id: product.id), :method => "get" %> -->
 		<%= button_to "Buy", new_charge_path(product.price), :method => "get" %>
 	<br>
 
