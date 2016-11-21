@@ -8,6 +8,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:code) %></th>
       <th><%= model_class.human_attribute_name(:resource) %></th>
+      <th><%= model_class.human_attribute_name(:notes) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -18,6 +19,7 @@
         <td><%= link_to promotion.id, promotion_path(promotion) %></td>
         <td><%= promotion.code %></td>
         <td><%= promotion.resource %></td>
+        <td><%= promotion.notes %></td>
         <td><%=l promotion.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

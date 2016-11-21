@@ -8,6 +8,8 @@
   <dd><%= @promotion.code %></dd>
   <dt><strong><%= model_class.human_attribute_name(:resource) %>:</strong></dt>
   <dd><%= @promotion.resource %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:notes) %>:</strong>
+  <dd><%= @promotion.notes %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
