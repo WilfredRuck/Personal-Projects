@@ -1,5 +1,5 @@
 .landingImage{
-	background-image: url("lyftcar2.jpg");
-	background-size: cover;
+	background-image: url("lyftcar.jpg");
+	background-size: 100%;
 	height: 100vh;
 }
