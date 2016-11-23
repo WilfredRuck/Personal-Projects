@@ -5,6 +5,8 @@
 	background-color: black;
 }
 
+
+
 .landingImage {
 	background-image: url("lyftcar.jpg");
 	background-size: cover;
@@ -12,6 +14,17 @@
 	background-repeat: no-repeat;
 	height: 100vh;
 }
+.landingImage .textOnPicture {
+	color: white;
+	text-align: center;
+	font-size: 70px;
+	text-shadow: 2px 2px 20px #000000;
+	position: relative;
+	top:50%;
+}
+
+
+
 
 .uberImage {
 	background-image: url("lyftcar2.jpg");
@@ -20,6 +33,16 @@
 	background-repeat: no-repeat;
 	height: 100vh;
 }
+.uberImage .textOnPicture {
+	color: white;
+	text-align: center;
+	font-size: 70px;
+	text-shadow: 2px 2px 20px #000000;
+	position: relative;
+	top:50%;
+}
+
+
 
 .lyftImage {
 	background-image: url("lyftheadphones.jpg");
@@ -28,6 +51,16 @@
 	background-repeat: no-repeat;
 	height: 100vh;
 }
+.lyftImage .textOnPicture {
+	color: white;
+	text-align: center;
+	font-size: 70px;
+	text-shadow: 2px 2px 20px #000000;
+	position: relative;
+	top:50%;
+}
+
+
 
 .viaImage {
 	background-image: url("lyftcar.jpg");
@@ -36,6 +69,16 @@
 	background-repeat: no-repeat;
 	height: 100vh;
 }
+.viaImage .textOnPicture {
+	color: white;
+	text-align: center;
+	font-size: 70px;
+	text-shadow: 2px 2px 20px #000000;
+	position: relative;
+	top:50%;
+}
+
+
 
 .gettImage {
 	background-image: url("lyftcar2.jpg");
@@ -43,5 +86,13 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 100vh;
+}
+.gettImage .textOnPicture {
+	color: white;
+	text-align: center;
+	font-size: 70px;
+	text-shadow: 2px 2px 20px #000000;
+	position: relative;
+	top:50%;
 }
 
