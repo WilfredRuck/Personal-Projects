@@ -1,6 +1,7 @@
 .myNav {
 	position: fixed;
 	color: white;
+	font-size: 15px;
 	background-color: black;
 }
 

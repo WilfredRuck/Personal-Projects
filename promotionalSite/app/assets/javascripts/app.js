@@ -1,16 +1,15 @@
 $(document).ready(function(){
-	$('#home').mouseenter(function(){
-		var d = document.getElementById("home");
+	$('#navItem').mouseenter(function(){
+		var d = document.getElementById("navItem");
 		d.className += " hover";
+		console.log("dont forget me!")
+		$(this).css("fontSize", "20px");
+
 	});
 
-	$('.hover').hover(function(){
-		console.log("Oyeah!");
-		$(this).style.size = "50";
-	})
-
-	$('#home').mouseleave(function(){
-		$('#home').removeClass("hover");
+	$('#navItem').mouseleave(function(){
+		$('#navItem').removeClass("hover");
+		$(this).css("fontSize","15px");
 		console.log("yay1");
 	});
 
