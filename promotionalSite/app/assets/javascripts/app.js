@@ -10,7 +10,7 @@ $(document).ready(function(){
 	$('#navItem').mouseleave(function(){
 		$('#navItem').removeClass("hover");
 		$(this).css("fontSize","15px");
-		console.log("yay1");
+		console.log("yay");
 	});
 
 	

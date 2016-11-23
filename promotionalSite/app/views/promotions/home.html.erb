@@ -43,6 +43,14 @@
 <div class="lyftImage" id="lyft">
 
 	<div class="textOnPicture"> Lyft! </div>
+	<div>
+		<h5> Lyft codes of the month: </h5> <br>
+		
+			<% @lyft_promotions.each |promotion| %>
+				 <%= promotion.code %> <br>
+			<% end %>
+		
+	</div>
 
 </div>
 

@@ -2,6 +2,7 @@ class PromotionsController < ApplicationController
   before_action :set_promotion, only: [:show, :edit, :update, :destroy]
   
   def home
+    @lyft_promotions = Promotion.where(resource: "Lyft")
   end
 
   # GET /promotions
