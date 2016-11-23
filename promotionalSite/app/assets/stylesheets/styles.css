@@ -1,5 +1,7 @@
 .myNav {
 	position: fixed;
+	color: white;
+	background-color: black;
 }
 
 .landingImage {
