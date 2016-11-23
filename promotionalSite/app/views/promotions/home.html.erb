@@ -1,6 +1,5 @@
 <div class="container-fluid">
-	<div class="row myNav">
-		
+	<div class="row myNav">		
 		<div class="col-2-md" id="navItem"> 
 			<a href="#top"> Home </a>
 		</div>
@@ -24,32 +23,52 @@
 		<div class="col-2-md"> 
 			 <!-- Nothing for now -->
 		</div>
-
 	</div>	
 </div>		
 	
 <div class="landingImage" id="top">
 
 	<div class="textOnPicture"> Welcome to Uncovered! </div>
-
 </div>
 
 <div class="uberImage" id="uber">
 
-	<div class="textOnPicture"> Uber! </div>
+	<div class="container-fluid containerText">
+		<div class="row">
+			<div class="col-12-xl">
+				
+				<div class="uberLogo"> Uber! </div>
+				<div class="uberText">
+					<br><br>
+					<h5> Uber codes of the month: </h5>
+		
+					<% @uber_promotions.each do |promotion| %>
+						<br><%= promotion.code %> <br>
+					<% end %>	
+				</div>
+			</div>
+		</div>
+	</div>
 
 </div>
 
 <div class="lyftImage" id="lyft">
 
-	<div class="textOnPicture"> Lyft! </div>
-	<div>
-		<h5> Lyft codes of the month: </h5> <br>
+	<div class="container-fluid containerText">
+		<div class="row">
+			<div class="col-12-xl">
+				
+				<div class="lyftLogo"> Lyft! </div>
+				<div class="lyftText">
+					<br><br>
+					<h5> Lyft codes of the month: </h5>
 		
-			<% @lyft_promotions.each |promotion| %>
-				 <%= promotion.code %> <br>
-			<% end %>
-		
+					<% @lyft_promotions.each do |promotion| %>
+						<br><%= promotion.code %> <br>
+					<% end %>	
+				</div>
+			</div>
+		</div>
 	</div>
 
 </div>
@@ -57,11 +76,9 @@
 <div class="viaImage" id="via">
 
 	<div class="textOnPicture"> Via! </div>
-
 </div>
 
 <div class="gettImage" id="gett">
 
 	<div class="textOnPicture"> Gett! </div>
-
 </div>

@@ -7,6 +7,12 @@
 	padding-right: 10px;
 }
 
+.containerText  {
+	padding-top: 35vh;
+	padding-bottom: 30vh;
+/*	background-color: black;
+*/}
+
 
 
 .landingImage {
@@ -35,13 +41,17 @@
 	background-repeat: no-repeat;
 	height: 100vh;
 }
-.uberImage .textOnPicture {
+.uberImage .uberLogo {
 	color: white;
 	text-align: center;
 	font-size: 70px;
 	text-shadow: 2px 2px 20px #000000;
-	position: relative;
-	top:50%;
+}
+.uberImage .uberText {
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	text-shadow: 2px 2px 20px #000000;
 }
 
 
@@ -53,13 +63,17 @@
 	background-repeat: no-repeat;
 	height: 100vh;
 }
-.lyftImage .textOnPicture {
+.lyftImage .lyftLogo {
 	color: white;
 	text-align: center;
 	font-size: 70px;
 	text-shadow: 2px 2px 20px #000000;
-	position: relative;
-	top:50%;
+}
+.lyftImage .lyftText {
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	text-shadow: 2px 2px 20px #000000;
 }
 
 
