@@ -4,6 +4,9 @@ class PromotionsController < ApplicationController
   def home
     @lyft_promotions = Promotion.where(resource: "Lyft")
     @uber_promotions = Promotion.where(resource: "Uber")
+    @via_promotions  = Promotion.where(resource: "Via")
+    @gett_promotions = Promotion.where(resource: "Gett")
+
   end
 
   # GET /promotions
