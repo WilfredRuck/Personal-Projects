@@ -33,7 +33,7 @@
 			<div class="col-12-xl">
 
 				<div class="textOnPicture"> 
-					Welcome to Exposure! <br> <br> <br>
+					Welcome to Exposure!<br> <br> <br>
 					<div class="smallTextOnLandingImage"> 
 						{Your home for discovering the cheaper side of life}
 					</div>
@@ -60,6 +60,33 @@
 					
 						<% @uber_promotions.each do |promotion| %>
 							<br> <%= promotion.code %> <br>
+
+			<!-- MODAL FOR CODE -->
+							
+							<!-- Button trigger -->
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+							  Details
+							</button>
+
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  								<div class="modal-dialog" role="document">
+    								<div class="modal-content">
+      									<div class="modal-header">
+        									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        									<h4 class="modal-title" id="myModalLabel"> <%=promotion.code %> </h4>
+      									</div>
+      									<div class="modal-body">
+        									<%= promotion.notes %>
+      									</div>
+      									<div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									    </div>
+									</div>
+								</div>
+							</div>
+			
+			<!-- END OF MODAL FOR CODE -->
+
 						<% end %>
 					<%end%>	
 				</div>
