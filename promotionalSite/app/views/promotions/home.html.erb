@@ -53,22 +53,22 @@
 				<div class="uberText">
 					<br><br>
 					<h5> Uber codes of the month: </h5>
-		
+					<%counter = 0%>
 					<% if @uber_promotions.empty? %>
 						<div>Coming Soon!</div>
 					<%else%>
 					
 						<% @uber_promotions.each do |promotion| %>
-							<br> <%= promotion.code %> <br>
+							<br> <%= promotion.code %> <br> <br>
 
 			<!-- MODAL FOR CODE -->
 							
 							<!-- Button trigger -->
-							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#<%=counter%>">
 							  Details
 							</button>
 
-							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal fade" id="<%=counter%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   								<div class="modal-dialog" role="document">
     								<div class="modal-content">
       									<div class="modal-header">
@@ -84,10 +84,10 @@
 									</div>
 								</div>
 							</div>
-			
+							<br>
 			<!-- END OF MODAL FOR CODE -->
-
-						<% end %>
+							<%counter+=1%>
+						<% end %> <!-- END OF PRMOTION CODE LOOP -->
 					<%end%>	
 				</div>
 			</div>
@@ -112,8 +112,35 @@
 					<%else%>
 					
 						<% @lyft_promotions.each do |promotion| %>
-							<br> <%= promotion.code %> <br>
-						<% end %>
+							<br> <%= promotion.code %> <br> <br>
+
+							<!-- MODAL FOR CODE -->
+							
+							<!-- Button trigger -->
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#<%=counter%>">
+							  Details
+							</button>
+
+							<div class="modal fade" id="<%=counter%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  								<div class="modal-dialog" role="document">
+    								<div class="modal-content">
+      									<div class="modal-header">
+        									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        									<h4 class="modal-title" id="myModalLabel"> <%=promotion.code %> </h4>
+      									</div>
+      									<div class="modal-body">
+        									<%= promotion.notes %>
+      									</div>
+      									<div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									    </div>
+									</div>
+								</div>
+							</div>
+							<br>
+			<!-- END OF MODAL FOR CODE -->
+							<%counter+=1%>
+						<% end %> <!-- END OF PROMOTION CODE LOOP -->
 					<%end%>	
 				</div>
 			</div>
@@ -138,8 +165,35 @@
 					<%else%>
 					
 						<% @via_promotions.each do |promotion| %>
-							<br> <%= promotion.code %> <br>
-						<% end %>
+							<br> <%= promotion.code %> <br> <br>
+
+							<!-- MODAL FOR CODE -->
+							
+							<!-- Button trigger -->
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#<%=counter%>">
+							  Details
+							</button>
+
+							<div class="modal fade" id="<%=counter%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  								<div class="modal-dialog" role="document">
+    								<div class="modal-content">
+      									<div class="modal-header">
+        									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        									<h4 class="modal-title" id="myModalLabel"> <%=promotion.code %> </h4>
+      									</div>
+      									<div class="modal-body">
+        									<%= promotion.notes %>
+      									</div>
+      									<div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									    </div>
+									</div>
+								</div>
+							</div>
+							<br>
+			<!-- END OF MODAL FOR CODE -->
+							<%counter+=1%>
+						<% end %> <!-- END OF PROMOTION CODE LOOP -->
 					<%end%>	
 				</div>
 			</div>
@@ -164,8 +218,35 @@
 					<%else%>
 					
 						<% @gett_promotions.each do |promotion| %>
-							<br> <%= promotion.code %> <br>
-						<% end %>
+							<br> <%= promotion.code %> <br> <br>
+
+							<!-- MODAL FOR CODE -->
+							
+							<!-- Button trigger -->
+							<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#<%=counter%>">
+							  Details
+							</button>
+
+							<div class="modal fade" id="<%=counter%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  								<div class="modal-dialog" role="document">
+    								<div class="modal-content">
+      									<div class="modal-header">
+        									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        									<h4 class="modal-title" id="myModalLabel"> <%=promotion.code %> </h4>
+      									</div>
+      									<div class="modal-body">
+        									<%= promotion.notes %>
+      									</div>
+      									<div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									    </div>
+									</div>
+								</div>
+							</div>
+							<br>
+			<!-- END OF MODAL FOR CODE -->
+							<%counter+=1%>
+						<% end %> <!-- END OF PROMOTION CODE LOOP -->
 					<%end%>	
 				</div>
 			</div>
