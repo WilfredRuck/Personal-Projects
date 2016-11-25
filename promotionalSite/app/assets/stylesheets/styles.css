@@ -27,6 +27,8 @@
 	text-align: center;
 	font-size: 70px;
 	text-shadow: 2px 2px 20px #000000;
+	line-height: 1.0;
+
 }
 .textOnPicture .smallTextOnLandingImage {
 	font-size: 40px;
