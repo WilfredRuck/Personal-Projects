@@ -38,11 +38,16 @@
 
 
 .uberImage {
-	background-image: url("uber.jpg");
+	background-image: linear-gradient(
+    	rgba(0, 0, 0, 0.5),
+    	rgba(0, 0, 0, 0.5)),
+		url("uber.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 100vh;
+	/*opacity: 0.5;
+	opacity: black;*/
 }
 .uberImage .uberLogo {
 	color: white;
@@ -64,7 +69,10 @@
 
 
 .lyftImage {
-	background-image: url("lyft1.jpg");
+	background-image: linear-gradient(
+    	rgba(0, 0, 0, 0.5),
+    	rgba(0, 0, 0, 0.5)),
+        url("lyft1.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -86,7 +94,10 @@
 
 
 .viaImage {
-	background-image: url("ford.jpg");
+	background-image: linear-gradient(
+    	rgba(0, 0, 0, 0.5),
+    	rgba(0, 0, 0, 0.5)),
+	    url("ford.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -108,7 +119,10 @@
 
 
 .gettImage {
-	background-image: url("ferrari458.jpg");
+	background-image: linear-gradient(
+    	rgba(0, 0, 0, 0.5),
+    	rgba(0, 0, 0, 0.5)),
+	    url("ferrari458.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
