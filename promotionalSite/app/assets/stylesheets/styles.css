@@ -125,14 +125,25 @@
 
 
 .modal {
-	color:black;
+	color: black;
 	font-style: oblique;
 	text-shadow: none;
 	text-orientation: upright;
 	line-height: 1.0;
 }
+.modal .btn {
+	width: 150px;
+	height: 40px;
+}
 
-
+.btn{
+	color: white;
+ 	background-color: black;
+ 	width: 200px;
+ 	height: 60px;
+ 	border-radius: 2%;
+  /*add any other properties you want to style*/
+}
 
 
 
