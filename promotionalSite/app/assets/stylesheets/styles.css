@@ -166,5 +166,8 @@ div {
 	line-height: 1.0;
 }
 
+.codes {
+	display: inline-block;
+}
 
 
