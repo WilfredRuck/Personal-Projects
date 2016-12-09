@@ -66,7 +66,7 @@
 					<%else%>
 					<span class="codes">
 						<% @uber_promotions.each do |promotion| %>
-							<br> <%= promotion.code %> <br> <br>
+							<%= promotion.code %>
 							
 			<!-- MODAL FOR CODE -->
 							
@@ -91,7 +91,6 @@
 									</div>
 								</div>
 							</div>
-							<br>
 			<!-- END OF MODAL FOR CODE -->
 							<%counter+=1%>
 						<% end %> <!-- END OF PRMOTION CODE LOOP -->

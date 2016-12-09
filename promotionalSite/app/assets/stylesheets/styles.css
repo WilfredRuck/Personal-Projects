@@ -163,7 +163,8 @@ div {
 }
 
 .codes {
-	display: inline-block;
+	float: left;
+	padding-left: 10px;
 }
 
 
