@@ -59,22 +59,22 @@
 						<p>For drivers, Uber provides exceptional pay while allowing you to be your own boss & pick your own hours. Take on fares whenever you wish (work as little or as much as you want) while meeting people in your city from all walks of life. </p>
 					</div>
 					<br>
-					<h3> Uber codes of the month: </h3>
+					<h3> Uber code of the month: </h3>
 					<%counter = 0%> <br>
 					<% if @uber_promotions.empty? %>
 						<div>Coming Soon!</div>
 					<%else%>
-					<span class="codes">
+					
 						<% @uber_promotions.each do |promotion| %>
 							<%= promotion.code %>
-							
+							<br> <br>
 			<!-- MODAL FOR CODE -->
 							
 							<!-- Button trigger -->
 							<button type="button" class="btnNew btn-primary btn-lg" data-toggle="modal" data-target="#<%=counter%>">
 							  Details
 							</button>
-					</span>
+					
 							<div class="modal fade" id="<%=counter%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   								<div class="modal-dialog" role="document">
     								<div class="modal-content">
@@ -110,7 +110,7 @@
 				
 				<div class="lyftLogo"> Lyft! </div>
 				<div class="lyftText">
-					<h3> Lyft codes of the month: </h3>
+					<h3> Lyft code of the month: </h3>
 					<% if @lyft_promotions.empty? %>
 						<div>Coming Soon!</div>
 					<%else%>
@@ -161,7 +161,7 @@
 				
 				<div class="viaLogo"> Via! </div>
 				<div class="viaText">
-					<h3> Via codes of the month: </h3>
+					<h3> Via code of the month: </h3>
 
 					<% if @via_promotions.empty?%>
 						<div>Coming Soon!</div>
@@ -213,7 +213,7 @@
 				
 				<div class="gettLogo"> Gett! </div>
 				<div class="gettText">
-					<h3> Gett codes of the month: </h3>
+					<h3> Gett code of the month: </h3>
 		
 					<% if @gett_promotions.empty? %>
 						<div>Coming Soon!</div>
