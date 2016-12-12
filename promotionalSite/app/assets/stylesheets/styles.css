@@ -15,7 +15,7 @@
 
 
 .landingImage {
-	background-image: url("locks.jpg");
+	background-image: url("door.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -63,6 +63,11 @@
 .uberImage .description {
 	line-height: 1.0;
 	font-size: 25px;
+}
+
+.uberSig {
+	float: right;
+	position: bottom;
 }
 
 
