@@ -1,0 +1,58 @@
+<body class="landing log-in-page">
+  
+  <div class="row nav">
+    <div class="col-xs-4"><%= button_to "Home", root_path, :method => :get, :class => "btn brand-blue-btn nav-home" %>
+    </div>
+
+    <div class="col-xs-4"> 
+      <p class="logo"> <%= link_to "CHATBOX", root_path %> </p>
+    </div>
+
+    <div class="col-xs-4">
+      <div class="nav-options">
+        <%= button_to "Sign up", new_user_registration_path, :method => :get, :class => "btn brand-blue-btn"  %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <div class="border">
+      
+      <div class="center">
+        <h2 class="logo-landing">Log In</h2>
+    <div>
+      <% flash.each do |key, value| %>
+          <p class="alert alert-<%= key %>"><%= value %></p>
+      <% end %>
+    </div>
+      </div>
+
+      <div class="center">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end -%>
+
+          <div class="actions">
+            <%= f.submit "Log in", :class => "btn log-in-button" %>
+          </div>
+          <%= render "devise/shared/links" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</body>

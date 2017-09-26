@@ -1,0 +1,253 @@
+// Place all the styles related to the Chatroom controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	font-family: Arial;
+}
+
+.log-in-page {
+	margin-top: 40px;
+}
+
+.sign-up-page {
+	margin-top: 55px;
+}
+
+.logged-in-landing {
+	margin-top: 60px;
+}
+
+.signed-out-landing {
+	margin-top: 50px;
+}
+
+.new-chatbox-page {
+	margin-top: 55px;
+}
+
+h2 {
+	text-align: center;
+}
+
+.container {
+	width: 100%;
+	padding-top: 105px;
+}
+
+.sign-up-container {
+	width: 100%;
+	padding-top: 75px;
+}
+
+.border {
+	display: inline-block;
+	border: solid black 3px;
+	padding: 30px;
+	display: table;
+	margin: 0 auto;
+	background:rgba(255,228,181,0.8);
+}
+
+.center {
+	display: table;
+	margin: 0 auto;
+}
+
+.btn-chat-create {
+	display: table;
+	margin: 0 auto;
+	background:rgba(0,0,0,0.8);
+	color: moccasin;
+}
+
+.btn-chat-create:hover { 
+	background-color: black;
+	color: moccasin;
+}
+
+.btn-chat-create:visited {
+	text-decoration: none;
+	color: moccasin;
+}
+
+.chatroom {
+	border: solid black 4px;
+	width: 100%;
+	height: 400px;
+	overflow-y: scroll;
+	display: inline-block;
+}
+
+.message-box {
+	width: 83%;
+}
+
+.chat-members {
+	border: solid black 3px;
+	width: 100%;
+	height: 400px;
+	overflow-y: scroll;
+	display: inline-block;
+}
+
+#member-title {
+	background-color: moccasin;
+	text-align: center;
+	font-size: 18px;
+}
+
+#members:nth-child(even) {
+	background-color: #1e90ff;
+	color: white;
+	font-size: 15px;
+}
+#members:nth-child(odd) {
+	background-color: moccasin;
+	font-size: 15px;
+}
+
+.chat-display-container {
+	float: left;
+	width: 100%;
+}
+
+.allChats {
+	float: left;
+	background-color: #1e90ff;
+	color: white;
+	a:link { text-decoration: none; color: white }
+	a:visited { text-decoration: none; color:white; }
+	a:hover { text-decoration: none; color:moccasin; font-weight: bolder; font-size: 16px; }
+}
+
+.userChats {
+	float: right;
+	background-color: moccasin;
+	color: black;
+	a:link { text-decoration: none; color: black }
+	a:visited { text-decoration: none; color:black; }
+	a:hover { text-decoration: none; color: #1e90ff; font-weight: bolder; font-size: 16px; }
+}
+
+.chatbox-options-all {
+	border-top: solid moccasin 2px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.chatbox-options-me {
+	border-top: solid #1e90ff 2px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+//////////// NAV ////////////
+
+.nav {
+	position: fixed;
+	top: 0;
+	margin: 0 auto;
+	width: 100%;
+	background:rgba(0,0,0,0.8);
+}
+
+.nav-home {
+	float: left;
+	margin-top: 10px;
+}
+
+.nav-options {
+	float: right;
+	margin-top: 10px;
+}
+
+.logo {
+	text-align: center;
+	padding-top: 10px;
+	font-size: 25px;
+	font-weight: bolder;
+	color: moccasin;
+	font-family: Georgia;
+	a:visited { text-decoration: none; color: moccasin;}
+	a:hover { text-decoration: none; color: moccasin;}
+}
+
+.brand-blue-btn {
+	color: white;
+	background-color: #1e90ff;
+}
+
+////////////////////////////////
+
+.landing {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.landing-text {
+	text-align: center;
+	font-size: 15px;
+}
+
+.sign-up-landing-button {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 80px;
+	padding-right: 80px;
+	margin-bottom: 10px;
+	font-size: 15px;
+	background-color: #1e90ff;
+}
+
+.log-in-landing-button {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 80px;
+	padding-right: 80px;
+	font-size: 15px;
+	background-color: #fffeff;
+	font-weight: bold;
+}
+
+.log-in-button {
+	font-size: 15px;
+	background-color: #1e90ff;
+	font-weight: bold;
+	color: white;
+	margin-bottom: 5px;
+}
+
+.sign-up-button {
+	font-size: 15px;
+	background-color: #1e90ff;
+	font-weight: bold;
+	color: white;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.logo-landing {
+	width: 100%;
+	font-size: 50px;
+	font-family: Georgia;
+	font-weight: bold;
+}
+
+.centerText {
+	text-align: center;
+}
+
+////////// SPECIAL WEBSITE CHANGES //////////
+
+//Stops extra spacing after form validation fail
+div.field_with_errors {
+  display: inline;
+}
+
+.alert {
+	color: red;
+	font-weight: bolder;
+	font-size: 16px;
+}

@@ -1,0 +1,73 @@
+<% if current_user %>
+	
+	<body class="logged-in-landing">
+	
+		<div>
+			<% flash.each do |key, value| %>
+		    	<p class="alert alert-<%= key %>"><%= value %></p>
+			<% end %>
+		</div>
+
+		<h2> <%= @user.username %> </h2><br />
+		
+
+		<%= button_to "Create a new ChatBox", new_chatroom_path, :method => :get, :class => "btn btn-chat-create" %>
+		
+		<div class="chat-display-container">
+			<div class="allChats">
+				<h2>ChatBoxes available</h2>
+				<% if @chat_rooms != nil %>
+					<% @chat_rooms.each do |chatroom| %>
+						<%= link_to "/chatroom/#{chatroom.id}" do  %>
+							<div class="chatbox-options-all"> <%= chatroom.title %> </div>
+						<% end %>
+					<% end %>
+				<% else %>
+					<p> There are no ChatBox's available </p>
+				<% end %>
+			</div>
+
+			<div class="userChats">
+				<h2>ChatBoxes you've created</h2>
+				<% if @myChats %>
+					<% @myChats.each do |chatroom| %>
+						<%= link_to "/chatroom/#{chatroom.id}" do  %>
+							<div class="chatbox-options-me"> <%= chatroom.title %> </div>
+						<% end %>
+					<% end %>
+				<% else %>
+					<p> You haven't created any ChatBoxes! <%= link_to "Create one now", new_chatroom_path, :method => :get %> </p>
+				<% end %>
+			</div>
+		</div>
+	</body>
+
+<% else %>
+	
+	<body class="landing signed-out-landing">
+		
+		<% flash.discard %>
+
+		<div class="container">
+			<div class="border">
+				<div class="center">
+					<h2 class="logo-landing">ChatBox</h2>
+					<p class="landing-text";">The perfect container<br/>for all your chats</p>
+				</div>
+				<div class="center">
+					<%= button_to "Get Started", new_user_registration_path, :method => :get, :class => "btn btn-primary sign-up-landing-button" %>
+					<%= button_to "Log In", new_user_session_path, :method => :get, :class => "btn log-in-landing-button" %>
+				</div>
+			</div>
+		</div>
+	</body>
+
+<% end %> 
+
+<script type="text/javascript">
+ var images = [
+ 'https://images.unsplash.com/photo-1450098722705-562182a09e45?dpr=2&auto=format&fit=crop&w=1500&h=2256&q=80&cs=tinysrgb&crop=', 
+ 'https://static.pexels.com/photos/379964/pexels-photo-379964.jpeg', 
+ 'https://images.unsplash.com/photo-1489489993638-b9e1eff5cd6d?dpr=2&auto=format&fit=crop&w=1500&h=2000&q=80&cs=tinysrgb&crop='];
+ $('.landing').css({'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'});
+</script>

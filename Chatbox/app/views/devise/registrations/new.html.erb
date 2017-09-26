@@ -1,0 +1,63 @@
+<body class="landing sign-up-page">
+  
+  <div class="row nav">
+    <div class="col-xs-4"><%= button_to "Home", root_path, :method => :get, :class => "btn brand-blue-btn nav-home" %>
+    </div>
+
+    <div class="col-xs-4"> 
+      <p class="logo"> <%= link_to "CHATBOX", root_path %> </p>
+    </div>
+
+    <div class="col-xs-4">
+      <div class="nav-options">
+        <%= button_to "Log in", new_user_session_path, :method => :get, :class => "btn brand-blue-btn"  %>
+      </div>
+    </div>
+  </div>
+
+
+  <div>
+    <%= devise_error_messages! %>
+    <div class="sign-up-container">
+      <div class="border">
+        
+        <div class="center">
+          <h2 class="logo-landing">Sign Up</h2>
+        </div>
+
+        <div class="center">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+            </div>
+
+            <div class="field">
+              <%= f.label :username %><br />
+              <%= f.text_field :username %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password %>
+              <% if @minimum_password_length %><br />
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Sign up", :class => "btn sign-up-button" %>
+            </div>
+            <%= render "devise/shared/links" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
