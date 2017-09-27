@@ -8,8 +8,7 @@
 					<div class="chatroom">
 						<div id="messages">
 							<% @chatroom.messages.each do |message| %>
-								<div class="centerText"> <%= message.timestamp %> </div>
-								<div> <%= message.user.username %>: <%= message.body %> </div>
+								<div> <%= message.user.username %>(<%= message.timestamp %>): <%= message.body %> </div>
 							<% end %>
 						</div>
 					</div>
@@ -17,7 +16,7 @@
 					<%= form_for @message, url: { :action => :create, :controller => :messages }, remote: true do |f| %>
 					<div class="container-fluid"> 
 						<div class="row">
-							<%= f.text_field :body, auto_focus: true, placeholder: "Enter message...", :class => "message-box col-xs-10" %>
+							<%= f.text_field :body, auto_focus: true, :autocomplete => :off, placeholder: "Enter message...", :class => "col-xs-10", :id => "message-box" %>
 							<%= f.submit "Send Message", :class => 'submit col-xs-2' %>
 						</div>
 					</div>

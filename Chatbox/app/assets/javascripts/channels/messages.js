@@ -4,10 +4,14 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
   },
 
   renderMessage: function(data) {
-    return "<p> <b>" + data.user + ": </b>" + data.message + "</p>";
+  	document.getElementById("message-box").value = "";
+    return "<p> <b>" + data.user + "(" + data.time + "): </b>" + data.message + "</p>";
   }
+
+
 });
 
 $(document).on('turbolinks:load', function() {
     $('input[type=submit]', this).attr('disabled', false)
 });
+

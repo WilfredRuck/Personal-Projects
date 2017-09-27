@@ -7,11 +7,21 @@
 		    	<p class="alert alert-<%= key %>"><%= value %></p>
 			<% end %>
 		</div>
-
-		<h2> <%= @user.username %> </h2><br />
 		
+		<h2> <%= @user.username %> </h2>
+		
+		<div class="center">
+			<h2>Coming Soon!</h2>
+			<ul>
+				<li>Private Messaging</li>
+				<li>Message Alerts & Sounds</li>
+				<li>Ability to send Images, Gifs, and Emojis</li>
+				<li>Customizable account profiles)</li>
+			</ul>
+		</div>
 
 		<%= button_to "Create a new ChatBox", new_chatroom_path, :method => :get, :class => "btn btn-chat-create" %>
+		
 		
 		<div class="chat-display-container">
 			<div class="allChats">
