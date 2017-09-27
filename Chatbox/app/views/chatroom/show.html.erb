@@ -5,10 +5,10 @@
 			<div class="row">
 				
 				<div class="col-sm-8">
-					<div class="chatroom">
-						<div id="messages">
+					<div class="chatroom" id="chatroom-scroll">
+						<div id="messages" >
 							<% @chatroom.messages.each do |message| %>
-								<div> <%= message.user.username %>(<%= message.timestamp %>): <%= message.body %> </div>
+								<div> (<%= message.timestamp %>)<%= message.user.username %>: <%= message.body %> </div>
 							<% end %>
 						</div>
 					</div>
@@ -17,7 +17,7 @@
 					<div class="container-fluid"> 
 						<div class="row">
 							<%= f.text_field :body, auto_focus: true, :autocomplete => :off, placeholder: "Enter message...", :class => "col-xs-10", :id => "message-box" %>
-							<%= f.submit "Send Message", :class => 'submit col-xs-2' %>
+							<%= f.submit "Send", :class => 'submit col-xs-2' %>
 						</div>
 					</div>
 					<% end %>
