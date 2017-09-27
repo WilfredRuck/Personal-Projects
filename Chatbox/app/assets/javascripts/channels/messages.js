@@ -12,12 +12,9 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
 
 });
 
-$("#chatroom-scroll").animate({ scrollTop: $('#chatroom-scroll').prop("scrollHeight")}, 1000);
-
 $(document).on('turbolinks:load', function() {
     $('input[type=submit]', this).attr('disabled', false)
-    var element = document.getElementById("chatroom-scroll");
-    element.scrollTop = element.scrollHeight;
+    updateScroll();
 });
 
 function updateScroll(){
