@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:1d39e1f2b5d8631e7982a151a90a5538@tarpon.redistogo.com:11958/
   channel_prefix: Chatbox_production

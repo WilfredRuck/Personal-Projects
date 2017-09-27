@@ -1,6 +1,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Added to have real-time functionality through ActionCable
+  config.action_cable.url = "wss://chat-box-app.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://chat-box-app.herokuapp.com', 'http://chat-box-app.herokuapp.com']
+  
   # Sets up Mailer for Development Mode
   config.action_mailer.default_url_options = { :host => 'chatbox.herokuapp.com' }
 
