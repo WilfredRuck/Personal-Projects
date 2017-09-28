@@ -4,7 +4,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				
-				<div class="col-sm-8">
+				<div class="col-sm-10">
 					<div class="chatroom" id="chatroom-scroll">
 						<div id="messages" >
 							<% @chatroom.messages.each do |message| %>
@@ -24,9 +24,9 @@
 
 				</div>
 
-				<div class="col-sm-4">
+				<div class="col-sm-2">
 					<div class="chat-members">
-						<div id="member-title">ChatBox Members</div>
+						<div id="member-title">ChatBox Members(<%=@chatroomUsers.length%>)</div>
 							<% if @chatroomUsers %>
 								<% @chatroomUsers.each do |user| %>
 									<div id="members">
