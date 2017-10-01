@@ -37,18 +37,21 @@
 				<% end %>
 			</div>
 
-			<div class="userChats">
-				<h2>ChatBoxes you've created</h2>
-				<% if @myChats %>
+			<% if @myChats.length > 0 %>
+				<div class="userChats">
+					<h2>ChatBoxes you've created</h2>
 					<% @myChats.each do |chatroom| %>
 						<%= link_to "/chatroom/#{chatroom.id}" do  %>
 							<div class="chatbox-options-me"> <%= chatroom.title %> </div>
 						<% end %>
 					<% end %>
-				<% else %>
+				</div>
+			<% else %>
+				<div class="userChatsNone">
+					<h2>ChatBoxes you've created</h2>
 					<p> You haven't created any ChatBoxes! <%= link_to "Create one now", new_chatroom_path, :method => :get %> </p>
-				<% end %>
-			</div>
+				</div>
+			<% end %>
 		</div>
 	</body>
 
