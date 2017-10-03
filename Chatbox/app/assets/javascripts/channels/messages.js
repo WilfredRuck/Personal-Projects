@@ -1,12 +1,12 @@
 App.messages = App.cable.subscriptions.create('MessagesChannel', {  
   received: function(data) {
-    return $('#messages').append(this.renderMessage(data));
+    $('#messages').append(this.renderMessage(data));
+	updateScroll();
+	playAudio();
+  	document.getElementById("message-box").value = "";
   },
 
   renderMessage: function(data) {
-  	document.getElementById("message-box").value = "";
-	updateScroll();
-	playAudio()
     return "<div> <b> (" + data.time + ")" + data.user + ": </b>" + data.message + "</div>";
   },
 
