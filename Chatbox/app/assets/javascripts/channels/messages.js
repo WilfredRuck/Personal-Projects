@@ -3,6 +3,7 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
     $('#messages').append(this.renderMessage(data));
 	updateScroll();
 	playAudio();
+	alert();  	
   	document.getElementById("message-box").value = "";
   },
 
@@ -26,4 +27,9 @@ function updateScroll() {
 function playAudio() {
 	$('#audio')[0].volume = 0.04
 	$('#audio').trigger('play')
+}
+
+function alert() {
+	document.title = "New Message...";
+	duration: 4000;
 }

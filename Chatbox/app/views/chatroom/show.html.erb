@@ -16,7 +16,7 @@
 					<%= form_for @message, url: { :action => :create, :controller => :messages }, remote: true do |f| %>
 					<div class="container-fluid"> 
 						<div class="row">
-							<%= f.text_field :body, auto_focus: true, :autocomplete => :off, placeholder: "Enter message...", :class => "col-xs-10", :id => "message-box" %>
+							<%= f.text_field :body, auto_focus: false, :autocomplete => :off, placeholder: "Enter message...", :class => "col-xs-10", :id => "message-box" %>
 							<%= f.submit "Send", :class => 'submit col-xs-2' %>
 						</div>
 					</div>
