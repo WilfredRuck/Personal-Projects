@@ -4,7 +4,9 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
 	updateScroll();
 	playAudio();
 	alert();  	
-  	document.getElementById("message-box").value = "";
+  	var messageBox = document.getElementById("message-box");
+  	messageBox.value = "";
+  	messageBox.blur();
   },
 
   renderMessage: function(data) {
