@@ -33,3 +33,7 @@ function alert() {
 	document.title = "New Message...";
 	duration: 4000;
 }
+
+function resetTitle() {
+	document.title = "ChatBox";
+}
