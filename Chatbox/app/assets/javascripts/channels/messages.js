@@ -3,7 +3,7 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
     $('#messages').append(this.renderMessage(data));
 	updateScroll();
 	playAudio();
-	alert();  	
+	alert();
   	var messageBox = document.getElementById("message-box");
   	messageBox.value = "";
   	messageBox.blur();
@@ -23,7 +23,9 @@ $(document).on('turbolinks:load', function() {
 
 function updateScroll() {
     var element = document.getElementById("chatroom-scroll");
-    element.scrollTop = element.scrollHeight;
+    if (element.scrollHeight) {
+    	element.scrollTop = element.scrollHeight;
+	}
 }
 
 function playAudio() {
