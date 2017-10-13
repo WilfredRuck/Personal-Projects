@@ -4,10 +4,10 @@
 	
 		<div>
 			<% flash.each do |key, value| %>
-		    	<p class="alert alert-<%= key %>"><%= value %></p>
+		    	<p class="alert alert-<%= key %>" id="flash" ><%= value %></p>
 			<% end %>
 		</div>
-		
+
 		<h2> <%= @user.username %> </h2>
 		
 		<div class="center">
