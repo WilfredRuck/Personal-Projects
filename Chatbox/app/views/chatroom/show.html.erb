@@ -1,5 +1,5 @@
 <body class="chatroom-page">
-	<% if @chatroom %>
+	<% if ( @chatroom_ids.include?(current_user.id) ) %>
 		<h2><%= @chatroom.title %> </h2>
 		<div class="container-fluid">
 			<div class="row">
@@ -26,11 +26,11 @@
 
 				<div class="col-sm-2">
 					<div class="chat-members">
-						<div id="member-title">ChatBox Members(<%=@chatroomUsers.length%>)</div>
-							<% if @chatroomUsers %>
+						<% if @chatroomUsers %>
+							<div id="member-title">ChatBox Members(<%=@chatroomUsers.length%>)</div>
 								<% @chatroomUsers.each do |user| %>
 									<div id="members">
-										<%= user %>
+										<%= link_to user, "/users/#{user}", :method => :get %>
 									</div>
 								<% end %>
 							<% end %>

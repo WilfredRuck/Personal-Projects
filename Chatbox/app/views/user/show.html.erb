@@ -1,3 +1,8 @@
 <body class="user-page">
-	<h2> <%= @user_page.username %> </h2>
+	<% if current_user == @user_page %>
+		<h2> Profile </h2>
+	<% else %>
+		<h2> <%= @user_page.username %> Profile </h2>
+
+	<% end %>
 </body>

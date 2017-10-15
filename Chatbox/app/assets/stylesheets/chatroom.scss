@@ -112,13 +112,22 @@ h2 {
 	font-size: 18px;
 }
 
+#members {
+	text-align: center;
+}
+
 #members:nth-child(even) {
 	background-color: #1e90ff;
-	color: white;
+	a:link { text-decoration: none; color: white; }
+	a:visited { text-decoration: none; color: white; }
+	a:hover { text-decoration: none; color: moccasin; }
 	font-size: 15px;
 }
 #members:nth-child(odd) {
 	background-color: moccasin;
+	a:link { text-decoration: none; color: black; }
+	a:visited { text-decoration: none; color: black; }
+	a:hover { text-decoration: none; color: #1e90ff; }
 	font-size: 15px;
 }
 
@@ -132,7 +141,7 @@ h2 {
 	color: white;
 	a:link { text-decoration: none; color: white }
 	a:visited { text-decoration: none; color:white; }
-	a:hover { text-decoration: none; color:moccasin; font-weight: bolder; font-size: 16px; }
+	a:hover { text-decoration: none; color: moccasin; font-weight: bolder; font-size: 16px; }
 }
 
 .userChats {
@@ -274,4 +283,12 @@ div.field_with_errors {
 
 .audios {
 	display: none;
+}
+
+.online_status {
+  color: red;
+  transition: color 1s ease;
+  &.online {
+    color: green;
+  }
 }

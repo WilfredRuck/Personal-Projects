@@ -1,8 +1,8 @@
 class ChatroomController < ApplicationController
 
 	def index
-		@chat_rooms = Chatroom.all
 		if current_user
+			@chat_rooms = Chatroom.all
 			@user = current_user
 			@myChats = Chatroom.where(user_id: @user.id)
 		end
@@ -27,15 +27,12 @@ class ChatroomController < ApplicationController
 	end
 
 	def show
-		@chatroom = Chatroom.includes(:messages).find_by(id: params[:id])
 		@message = Message.new
+		@chatroom = Chatroom.includes(:messages).find_by(id: params[:id])
+		@chatroom_ids = Chatroom.includes(:messages).pluck(:user_id).uniq
 		@chatroomUsers = Array.new
-		check = Array.new
-		@chatroom.messages.each do |message|
-			if !(check.include?(message.user_id))
-				check.push(message.user_id)
-				@chatroomUsers.push( (User.find_by(id: message.user_id)).username )
-			end
+		@chatroom_ids.each do |id|
+			@chatroomUsers.push(User.find_by(id: id).username)
 		end
 	end
 

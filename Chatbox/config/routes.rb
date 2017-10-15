@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get '/', to: 'chatroom#index'
   get '/users/:username', to: 'user#show'
+  post 'users/:username', to: 'user#invite_friend'
   post '/chatroom/:id', to: 'messages#create'
   
   resources :chatroom

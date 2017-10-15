@@ -6,10 +6,14 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :chatrooms, through: :messages
 
-  validates :username, presence: true, uniqueness: true, case_sensitive: false
+  validates :username, presence: true, uniqueness: true
   validate :validate_chats
   
   def validate_chats
-    errors.add(:chatrooms, "You can only have 10 chatboxes at a time") if chatrooms.count > 15
+    errors.add(:chatrooms, "You can only own 10 chatboxes at a time") if chatrooms.count >= 10
   end
+
+  # def online?
+  #   !Redis.new.get("user_#{self.id}_online").nil?
+  # end
 end
