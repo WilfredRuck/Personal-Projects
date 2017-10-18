@@ -10,7 +10,8 @@ class MessagesController < ApplicationController
 		ActionCable.server.broadcast 'messages',
 			message: @message.body,
 			user: @message.user.username,
-			time: @message.timestamp
+			time: @message.timestamp,
+			current_user: flash[:username]
 
 		if (@chatroom.messages.length > 150)
 			@chatroom.messages.first.destroy

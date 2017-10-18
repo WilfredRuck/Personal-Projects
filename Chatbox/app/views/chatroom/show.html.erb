@@ -1,5 +1,4 @@
 <body class="chatroom-page">
-	<% if ( @chatroom_ids.include?(current_user.id) ) %>
 		<h2><%= @chatroom.title %> </h2>
 		<div class="container-fluid">
 			<div class="row">
@@ -42,8 +41,4 @@
 		</div>
 
 		<%= audio_tag "notificationSound.mp3", :class => "audios", :id => "audio", auto_play: false %>
-
-	<% else %>
-		<h2>You don't have access to this ChatBox.</h2>
-	<% end %>
 </body>
