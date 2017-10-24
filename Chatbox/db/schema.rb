@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20171015184950) do
 
   create_table "messages", force: :cascade do |t|
     t.text "body"
-    t.integer "user_id"
-    t.integer "chatroom_id"
+    t.bigint "user_id"
+    t.bigint "chatroom_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
@@ -50,4 +50,6 @@ ActiveRecord::Schema.define(version: 20171015184950) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
 end
