@@ -34,7 +34,6 @@ class ChatroomController < ApplicationController
 		@chatroom_ids.each do |id|
 			@chatroomUsers.push(User.find_by(id: id).username)
 		end
-		flash[:username] = current_user.username
 	end
 
 
