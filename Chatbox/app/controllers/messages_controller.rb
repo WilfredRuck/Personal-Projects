@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
 			message: @message.body,
 			user: @message.user.username,
 			time: @message.timestamp,
-			current_user: flash[:username]
+			avatar: @message.user.avatar.url(:thumb)
 
 		if (@chatroom.messages.length > 150)
 			@chatroom.messages.first.destroy

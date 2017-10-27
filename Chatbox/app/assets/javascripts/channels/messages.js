@@ -2,20 +2,15 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
   received: function(data) {
     $('#messages').append(this.renderMessage(data));
 	updateScroll();
-	if (data.user != data.current_user) {
-		playAudio();
-		alert();
-		console.log("not the daddy");
-	}
-	console.log(data.user)
-	console.log(data.current_user)
+	playAudio();
+	alert();
   	var messageBox = document.getElementById("message-box");
   	messageBox.value = "";
   	messageBox.blur();
   },
 
   renderMessage: function(data) {
-    return "<div> <b> (" + data.time + ")" + data.user + ": </b>" + data.message + "</div>";
+    return "<div> <b> (" + data.time + ")" + data.user + "<img class='round-image-50' src=" + data.avatar + ">" + ": </b>" + data.message + "</div>";
   },
 
 
