@@ -16,10 +16,10 @@ App.messages = App.cable.subscriptions.create('MessagesChannel', {
 
 });
 
-$(document).on('turbolinks:load', function() {
+function chatbox() {
     $('input[type=submit]', this).attr('disabled', false)
     updateScroll();
-});
+};
 
 function updateScroll() {
     var element = document.getElementById("chatroom-scroll");

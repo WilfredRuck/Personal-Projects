@@ -44,3 +44,11 @@
 
 		<%= audio_tag "notificationSound.mp3", :class => "audios", :id => "audio", auto_play: false %>
 </body>
+
+<script type="text/javascript"> 
+	// THIS FUCTION UPDATES THE CHATBOX SCROLLBAR AS SOON AS THE PAGE LOADS
+	function start() {
+		chatbox()
+	}
+	window.onload = start;
+</script>
