@@ -48,15 +48,18 @@ let render = (presences) => {
 // Channels
 let room = socket.channel("room:lobby", {})
 room.on("presence_state", state => {
-  Presence.syncState(presences, state)
+  presences = Presence.syncState(presences, state)
   render(presences)
 })
 
 room.on("presence_diff", diff => {
-  Presence.syncDiff(presences, diff)
+  presences = Presence.syncDiff(presences, diff)
   render(presences)
 })
 
+room.join()
+
+// Chat
 let messageInput = document.getElementById("NewMessage")
 messageInput.addEventListener("keypress", (e) => {
   if (e.keyCode == 13 && messageInput.value != "") {
@@ -78,5 +81,3 @@ let renderMessage = (message) => {
 }
 
 room.on("message:new", message => renderMessage(message))
-
-room.join()
