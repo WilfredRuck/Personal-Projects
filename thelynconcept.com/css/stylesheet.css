@@ -1,0 +1,743 @@
+/* ==========================================================================
+	Main
+========================================================================== */
+
+	
+
+	::-webkit-scrollbar 
+	{ 
+		display: none; 
+	}
+	
+	html, body
+	{
+	
+		margin: 0px;
+		padding: 0px;
+		background: #000;
+		color: #fff;
+		font-family: 'Raleway', sans-serif;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		overflow: auto;
+	}
+	
+	h1, h2, h3, h4
+	{
+
+	}
+	
+	p, ol, ul
+	{
+		margin-top: 0;
+	}
+	
+	ol, ul
+	{
+		padding: 0;
+		list-style: none;		
+	}
+
+	p.footer 
+	{
+		letter-spacing: 2px;
+		line-height: 1.4em;
+		font-size: .5em;
+		margin: 20px;
+		position: fixed;
+		text-align: left;
+		bottom: 0;		
+		left: 0;
+		z-index: 20;
+	}
+	
+	img.logo 
+	{
+		width: 40px;
+		margin: 20px;
+		position: fixed;
+		bottom: 0;	
+		text-align: right;
+		right: 0;
+		z-index: 20;
+	}
+
+	img.logo-top 
+	{
+		width: 10em;
+		margin-top: 2em;
+	}
+	
+	p.logo-top 
+	{
+		text-align: center;
+	}
+	
+	.pointer
+	{
+		cursor:pointer;
+		-webkit-filter: brightness(3);
+		filter: brightness(20%);
+		-webkit-filter: saturate(8);
+		filter: saturate(50%);
+	}
+
+
+
+/*=============================================================================
+	Wrapper
+=============================================================================*/
+
+
+
+	#wrapper-no-padding
+	{
+		overflow: hidden;
+	}
+	
+
+
+/* ==========================================================================
+	Menu
+========================================================================== */
+
+ 
+   
+	nav
+	{
+		background-color: none;
+		top:0;
+		left:0;
+		text-decoration: none;
+		text-align: center;
+	}
+
+	nav ul
+	{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: left;		
+	}
+
+	nav ul li
+	{
+		display: inline-block;
+		text-transform: uppercase;
+		margin: 0;
+		letter-spacing: .2em;
+		font-size: .8em;
+		padding-top: 5em;
+		padding-bottom: 2em;
+		color: #fff;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	nav ul li a
+	{
+		font-family: 'Raleway', sans-serif;
+		padding: 1em 1em;
+		text-decoration: none;
+		color: #fff;
+		text-align: center;		
+	}
+
+	#responsive-nav 
+	{
+		cursor: pointer;
+		color: #000;
+		font-family: 'Raleway', sans-serif;
+		font-weight: 600;
+		padding: 1.5em 0;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		background-color: #bad433;
+		text-decoration: none;
+		text-align: center;
+	}
+
+
+	
+/* ==========================================================================
+	Desktop Main Menu - Left
+========================================================================== */	
+	
+	
+	
+	circle 
+	{
+		font-size: 2em;
+		cursor: pointer;
+		position: fixed;
+		left:0;
+		margin: 10px;
+	}
+
+	circle:hover 
+	{
+		color:#bad433;
+	}
+
+	.menu 
+	{
+		position: fixed;
+		background: #000;
+		overflow: hidden;
+		font-family: 'Raleway', sans-serif;
+		z-index: 1;
+		text-transform: uppercase;
+		letter-spacing: .2em;
+		line-height: 2em;
+		text-align: left;
+		left:0;
+		top:0;		  
+		width: 75px;
+		height: 75px;
+	}
+	
+	.menu:hover 
+	{
+		width: 94%;
+		-webkit-transition: width 4s ease;
+		transition: width 4s ease,
+	}
+	
+	.menuItem ul 
+	{
+		position: absolute;
+		left: 80px;
+		top: 0;
+		color: #fff;
+		font-size: .7em;
+		display: inline-block;
+		list-style-type: none;
+	}	
+
+	.menuItem ul li
+	{
+		display: inline-block;
+		letter-spacing: .2em;
+		color: #fff;
+		text-decoration: none;
+		padding: .5em;
+		
+	}
+	
+	.menuItem ul li a
+	{
+		color: #fff;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	
+	.menuItem ul li a:hover
+	{
+		color: #bad433;
+		transition: color 1.5s;
+	}
+
+	.menuItem 
+	{
+		position: relative;
+		margin: 20px;
+		top:0;
+		left: 0px;
+	}
+	
+	.menuItem:hover 
+	{
+		background: none;
+		color: #bad433;
+		top:0;
+		left: 0px;
+	}
+
+
+
+/* ==========================================================================
+	Desktop Social Media Menu - Right
+========================================================================== */
+   
+      
+   
+	triangle 
+	{
+		font-size: 2.5em;
+		cursor: pointer;
+		position: fixed;
+		right:0;
+		margin: 10px;
+	}
+	
+	triangle:hover 
+	{
+		color:#bad433;
+	}
+	
+	.menu2 
+	{
+		position: fixed;
+		background: #000;
+		overflow: hidden;
+		font-family: 'Raleway', sans-serif;
+		z-index: 0;
+		text-transform: uppercase;
+		letter-spacing: .2em;
+		line-height: 2em;	
+		text-align: right;  
+		right:0;
+		top:0;	
+		width: 75px;
+		height: 75px;
+		
+	}
+
+	.menu2:hover 
+	{
+		width: 94%;
+		-webkit-transition: width 4s ease;
+		transition: width 4s ease,
+	}
+	
+	.menuItem2 ul 
+	{
+		position: absolute;
+		right: 80px;
+		top: 0;
+		color: #bad433;
+		font-size: .7em;			
+		list-style-type: none;
+	}
+  
+	.menuItem2 ul li
+	{
+		display: inline-block;
+		letter-spacing: .2em;
+		color: #fff;
+		text-decoration: none;
+		padding: .5em;
+		
+	}
+
+	.menuItem2 ul li a
+	{
+		color: #fff;
+		text-decoration: none;	
+		cursor: pointer;
+		
+	}	
+
+	.menuItem2 ul li a:hover
+	{
+		color: #bad433;
+		transition: color 1.5s;
+		
+	}	
+	
+	.menuItem2
+	{
+		position: relative;
+		margin: 20px;
+		top:0;
+		right: 0px;
+	}
+
+	.menuItem2:hover 
+	{
+		background: none;	
+		color: #fff;
+		top:0;
+		right:0px;	
+		
+	}
+
+	
+	
+/* ==========================================================================
+	Padding
+========================================================================== */
+   
+   
+	
+	#add-even-padding
+	{
+		padding: 1em 0em 1em;
+	}	
+	
+	#add-top-padding
+	{
+		padding: 30vh 0em 0em;
+	}	
+	
+
+
+/*=============================================================================
+	Modal
+=============================================================================*/		
+
+
+	
+	.myImg /* Style the Image Used to Trigger the Modal */
+	{
+		border-radius: 5px;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+
+	.myImg:hover
+	{
+		opacity: 0.7;
+	}
+	
+	.modal /* The Modal (background) */
+	{
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		padding-top: 2em; /* Location of the box */
+		padding-bottom: 2em; /* Location of the box */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+	
+	.modal-content /* Modal Content (Image) */
+	{
+		margin: auto;
+		display: block;
+		width: 80%;
+		height: auto;
+		z-index: 8;
+	}
+	
+	#caption /* Caption of Modal Image (Image Text) - Same Width as the Image */
+	{
+		margin: auto;
+		display: block;
+		width: 80%;
+		max-width: 700px;
+		text-align: center;
+		color: #fff;
+		padding: 10px 0;
+		text-transform: capitalize;
+	}
+	
+	.modal-content, #caption /* Add Animation - Zoom in the Modal */
+	{
+		-webkit-animation-name: zoom;
+		-webkit-animation-duration: 0.6s;
+		animation-name: zoom;
+		animation-duration: 0.6s;
+	}
+
+	@-webkit-keyframes zoom 
+	{
+		from {-webkit-transform:scale(0)}
+		to {-webkit-transform:scale(1)}
+	}
+
+	@keyframes zoom 
+	{
+		from {transform:scale(0)}
+		to {transform:scale(1)}
+	}
+
+
+
+/* ==========================================================================
+	Close Button
+========================================================================== */
+
+
+
+	.close
+	{
+		position: fixed;
+		top: 0;
+		right: 5%;
+		color: #f1f1f1;
+		font-size: 10vh;
+		font-weight: bold;
+		transition: 0.3s;
+		width: 10%;
+		height: 100%;
+		text-align: center;
+		z-index: 20;
+	}
+
+	.close:hover, .close:focus
+	{
+		color: #bbb;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+
+	.close2
+	{
+		position: fixed;
+		top: 0;
+		right: 0;
+		color: #f1f1f1;
+		font-size: 10vh;
+		font-weight: bold;
+		transition: 0.3s;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		z-index: 1;
+	}
+
+	.close2:hover, .close2:focus
+	{
+		color: #bbb;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	
+	@media only screen and (max-width: 700px) /* 100% Image Width on Smaller Screens */
+	{
+		.modal-content
+		{
+			width: 100%;
+		}
+	}
+
+
+
+/* ==========================================================================
+	Filter
+========================================================================== */
+
+
+
+	.filter
+	{
+		background-color: none;
+		text-align: center;
+		text-decoration: none;
+		width: 100%;
+	}
+
+	.filter ul
+	{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	.filter ul li
+	{
+		display: inline-block;
+		text-transform: uppercase;
+		margin: 0;
+		letter-spacing: .2em;
+		font-size: 3em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		color: #fff;
+		font-weight: 500;
+		text-decoration: none;
+		text-align: center;
+	}
+
+	.filter ul li a
+	{
+		font-family: 'Raleway', sans-serif;
+		padding-left: 1vh;
+		text-decoration: none;
+		color: #bad433;
+		text-align: justify;
+	}
+
+	  
+	  
+/* ==========================================================================
+	Gallery
+========================================================================== */
+
+	  
+	  
+	.sets
+	{ 
+		-webkit-column-count: 5;
+		-moz-column-count: 5;
+		column-count: 5;
+		-webkit-column-gap: 10px;
+		-moz-column-gap: 10px;
+		column-gap: 10px;
+		margin-top: 10px;
+		overflow: hidden;
+	}  	  
+	  
+	.sets img
+	{
+		width:100%;
+		height:auto;
+		float:center;
+		transition: 2s;
+		margin-bottom: 10px;
+		page-break-inside: avoid; /* For Firefox. */
+		-webkit-column-break-inside: avoid; /* For Chrome & friends. */
+		break-inside: avoid; /* For standard browsers like IE. :-) */
+	}
+	
+	.sets a
+	{
+		width:100%;
+		transition:all 0.2s;
+		display:block;
+		float:left;
+		opacity:1;
+		height:auto;
+	}
+	
+	@media screen and (max-width:950px)
+	{
+		.menu
+		{ 
+			display: none;
+		}
+
+		.menu2
+		{ 
+			display: none;
+		}
+
+		.filter
+		{ 
+			font-size: 2vh;
+		}
+
+		.sets
+		{ 
+			-webkit-column-count: 3;
+			-moz-column-count: 3;
+			column-count: 3;
+			margin-left: 1em;
+			margin-right: 1em;
+		}		
+		
+		#add-top-padding
+		{
+			padding: 10vh 0em 0em;
+		}	
+	}
+	
+	@media screen and (min-width:951px)
+	{		
+		nav
+		{
+			display: none;
+		}
+				
+		#add-even-padding
+		{
+			padding: 4em 0em 4em;
+		}			
+	}
+	
+	@media screen and (max-width: 767px)
+	{		
+		.sets 
+		{ 
+			-webkit-column-count: 2;
+			-moz-column-count: 2;
+			column-count: 2;
+			margin-left: 1em;
+			margin-right: 1em;
+		}
+	}
+	
+	@media screen and (max-width: 479px)
+	{
+		.sets
+		{ 
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			column-count: 1;
+		}
+	}
+	
+	
+	
+/* ==========================================================================
+	After Opened
+========================================================================== */
+
+	
+	
+	.sets .hide
+	{
+		width:0%;
+		opacity:0;
+		transition:all 2s;
+		float:center;
+	}
+	
+	
+	
+/* ==========================================================================
+	Social Icons
+========================================================================== */
+   
+   
+   
+	p.social
+	{
+		font-size: .6em;
+		font-family: 'Raleway', sans-serif;
+		color: #fff;
+		text-transform: capitalize;
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+	.social
+	{
+		text-decoration: none;
+		text-align: center;
+		font-size: 1.5em;
+		font-family: 'Raleway', sans-serif;
+		text-transform: uppercase;
+	}
+
+	.social ul
+	{
+		list-style: none;
+		text-decoration: none;
+		padding-top: 20px;
+	}
+
+	.social ul li
+	{
+		display: inline-block;	
+		font-weight: 500;
+		text-align: center;
+		width: 130px;
+		height: 100px;
+		margin:0px auto 0px auto;
+		
+	}
+
+	.social ul li a
+	{		
+		text-decoration: none;
+		text-align: center;	
+		cursor: pointer;		
+		color: #bad433;		
+	}
+	
+	.social ul li a:hover
+	{		
+		color: #fff;	
+		transition: color 1.5s;
+	}	
