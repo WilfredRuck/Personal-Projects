@@ -1,19 +1,29 @@
 // Place all the styles related to the Code controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway');
 
 body {
 	background-color: black;
+	font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 45px;
 	color: white;
 }
 
-h2 {
-	color:white;
+.code-count {
+	font-size: 28px;
+	color: #bad433;
+	border: #fff 2px solid;
+	border-radius: 50%;
+	padding: 15px;
+	display: inline;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 30px;
 }
 
 #success {
@@ -25,11 +35,13 @@ h2 {
 .genSection {
 	display: table;
 	margin: 0 auto;
+	width: 550px;
+	margin-top: 50px;
 	text-align: center;
-	padding: 50px;
-	padding-top: 30px;
+	padding-top: 20px;
+	padding-bottom: 30px;
 	background-color: black;
-	border: #bad433 2px solid; 
+	border: #fff 2px solid; 
 }
 
 .button {
@@ -39,7 +51,7 @@ h2 {
 	font-size: 16px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	width: 250px;
+	width: 300px;
 }
 
 .button:hover {
@@ -50,10 +62,10 @@ h2 {
 #random-code {
 	border: 1px black dotted;
 	display: inline-block;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	width: 250px;
+	width: 300px;
 	font-weight: bolder;
 	color: white;
 	border: #bad433 2px solid;
@@ -68,16 +80,15 @@ h2 {
 
 .usedCodes {
 	height: 100%;
-	width: 480px;
-	border: solid 1px black;
+	width: 550px;
+	margin-top: 60px;
 	color: white;
-	font-family: 'Raleway', sans-serif;
 	font-weight: bolder;
 	font-size: 1.1em
 }
 
 .usedCode {
-	border-bottom: solid 2px #bad433;
+	border-top: solid 2px #bad433;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 3px;

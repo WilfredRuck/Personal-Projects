@@ -11,10 +11,13 @@
 </div>
 
 <div class="usedSection">
-	<h2>[<%= @codes.length %>]</h2>
 	<div class="usedCodes">
 		<% @codes.each do |x| %>
 			<div class="usedCode"><%= x.code %></div>
 		<% end %>
 	</div>
+</div>
+
+<div>
+	<div class="code-count"><%= @codes.length %></div>
 </div>
