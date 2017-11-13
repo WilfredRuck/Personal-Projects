@@ -24,6 +24,12 @@ h1 {
 	bottom: 0;
 	right: 0;
 	margin: 30px;
+	animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { box-shadow:0px 0px 0px 0px #000000; }
+  to { box-shadow:0px 0px 20px 5px #bad433; }
 }
 
 #success {
@@ -57,6 +63,12 @@ h1 {
 .button:hover {
 	color: white;
 	cursor: pointer;
+}
+
+.copy {
+	background-color: lightgray;
+	font-size: 10px;
+	padding: 7px 4px 7px 4px;
 }
 
 #random-code {
