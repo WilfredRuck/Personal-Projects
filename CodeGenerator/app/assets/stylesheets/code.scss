@@ -1,6 +1,7 @@
 // Place all the styles related to the Code controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 body {
 	background-color: black;
@@ -8,6 +9,7 @@ body {
 
 h1 {
 	font-size: 40px;
+	color: white;
 }
 
 h2 {
@@ -26,7 +28,8 @@ h2 {
 	text-align: center;
 	padding: 50px;
 	padding-top: 30px;
-	background-color: white;
+	background-color: black;
+	border: #bad433 2px solid; 
 }
 
 .button {
@@ -36,8 +39,7 @@ h2 {
 	font-size: 16px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 40px;
-	padding-right: 40px;
+	width: 250px;
 }
 
 .button:hover {
@@ -49,7 +51,12 @@ h2 {
 	border: 1px black dotted;
 	display: inline-block;
 	margin-bottom: 25px;
-	padding: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 250px;
+	font-weight: bolder;
+	color: white;
+	border: #bad433 2px solid;
 }
 
 .usedSection {
@@ -61,14 +68,16 @@ h2 {
 
 .usedCodes {
 	height: 100%;
-	width: 100%;
+	width: 480px;
 	border: solid 1px black;
-	overflow-y: auto;
-	background-color: white;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	font-weight: bolder;
+	font-size: 1.1em
 }
 
 .usedCode {
-	border-bottom: solid 1px black;
+	border-bottom: solid 2px #bad433;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 3px;

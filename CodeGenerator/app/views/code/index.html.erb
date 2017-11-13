@@ -4,8 +4,8 @@
 		<p id="success" value="#{flash[:success]}"> <%= flash[:success] %> </p>
 		<div id="random-code">
 			<%= flash[:code] %> 
-		</div>
 			<button onclick="copyText('<%= flash[:code] %>')">Copy</button>
+		</div>
 	<% end %>
 	<%= button_to 'Generate new code', code_index_path, :class => "button", :method => :post %>
 </div>
