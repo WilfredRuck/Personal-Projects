@@ -5,9 +5,5 @@
 });
 
  function copyText(code) {
-  var copyText = document.getElementById("#random-code");
-  console.log(copyText);
-  code.select();
-  document.execCommand("Copy");
-  alert("Copied!");
+  clipboard.writeText(code);
 }
