@@ -3,10 +3,14 @@
 	<% if flash[:code] %>
 		<p id="success" value="#{flash[:success]}"> <%= flash[:success] %> </p>
 		<div id="random-code">
-			<%= flash[:code] %> 
+			<div id="actual-code">
+				<%= flash[:code] %> 
+			</div>
 			<button onclick="copyText('<%= flash[:code] %>')" class="copy">copy</button>
-			<div id="copied"></div>
 		</div>
+		
+		<div id="copied"></div>
+
 	<% end %>
 	<%= button_to 'Generate new code', code_index_path, :class => "button", :method => :post %>
 </div>

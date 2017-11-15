@@ -66,21 +66,34 @@ h1 {
 }
 
 .copy {
-	background-color: lightgray;
+	background-color: #bad433;
+	color: #000000;
+	border: 2px #bad433 solid;
 	font-size: 10px;
-	padding: 7px 4px 7px 4px;
+	height: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: right;
+}
+
+#copied {
+	color: white;
+	padding-bottom: 10px;
 }
 
 #random-code {
-	border: 1px black dotted;
 	display: inline-block;
 	margin-bottom: 15px;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	width: 300px;
 	font-weight: bolder;
-	color: white;
 	border: #bad433 2px solid;
+}
+
+#actual-code {
+	display: inline;
+	color: white;
+	margin-top: 20px;
+	padding-bottom: 10px;
 }
 
 .usedSection {
