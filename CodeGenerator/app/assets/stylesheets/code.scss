@@ -71,8 +71,8 @@ h1 {
 .button:hover {
 	color: white;
 	cursor: pointer;
-	-webkit-transition: all 250ms linear;
-  	transition: all 250ms linear;
+	-webkit-transition: all 100ms linear;
+  	transition: all 100ms linear;
 }
 
 .copy {
@@ -89,8 +89,8 @@ h1 {
 
 .copy:hover {
   color: #fff;
-  -webkit-transition: all 250ms linear;
-  transition: all 250ms linear;
+  -webkit-transition: all 50ms linear;
+  transition: all 50ms linear;
   cursor: pointer; 
 }
 
@@ -103,8 +103,8 @@ h1 {
 
 .copy2:hover {
   color: #fff;
-  -webkit-transition: all 250ms linear;
-  transition: all 250ms linear;
+  -webkit-transition: all 50ms linear;
+  transition: all 50ms linear;
   cursor: pointer; 
 }
 
