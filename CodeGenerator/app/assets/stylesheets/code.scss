@@ -94,6 +94,20 @@ h1 {
   cursor: pointer; 
 }
 
+.copy2 {
+	background-color: #bad433;
+	color: #000000;
+	border-radius: 0;
+	border: none;
+}
+
+.copy2:hover {
+  color: #fff;
+  -webkit-transition: all 250ms linear;
+  transition: all 250ms linear;
+  cursor: pointer; 
+}
+
 #copied {
 	color: white;
 	padding-bottom: 10px;

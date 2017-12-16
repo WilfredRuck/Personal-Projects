@@ -18,7 +18,10 @@
 
 <div class="usedSection">
 	<% @codes.each do |x| %>
-		<div class="usedCode"><%= x.code %></div>
+		<div class="usedCode">
+			<%= x.code %> 
+			<button onclick="copyText('<%= x.code %>')" class="copy2">Copy</button>
+		</div>
 	<% end %>
 </div>
 
