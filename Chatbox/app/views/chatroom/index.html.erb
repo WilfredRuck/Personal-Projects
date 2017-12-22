@@ -1,7 +1,8 @@
 <% if current_user %>
 	
 	<body class="logged-in-landing">
-	
+		
+		<!-- Alerts -->
 		<div>
 			<% flash.each do |key, value| %>
 		    	<p class="alert alert-<%= key %>" id="flash" ><%= value %></p>
@@ -10,6 +11,7 @@
 
 		<h2> <%= @user.username %> </h2>
 		
+		<!-- Features Coming Soon -->
 		<div class="center">
 			<h2>Coming Soon!</h2>
 			<ul>
@@ -19,9 +21,10 @@
 
 		</div>
 
+		<!-- Button to create a new Chatbox -->
 		<%= button_to "Create a new ChatBox", new_chatroom_path, :method => :get, :class => "btn btn-chat-create" %>
-		
-		
+
+		<!-- All Chatboxes made by all users -->
 		<div class="chat-display-container">
 			<div class="allChats">
 				<h2>ChatBoxes available</h2>
@@ -37,6 +40,7 @@
 			</div>
 
 			<% if @myChats.length > 0 %>
+				<!-- All Chatboxes made by the current user -->
 				<div class="userChats">
 					<h2>ChatBoxes you've created</h2>
 					<% @myChats.each do |chatroom| %>
@@ -46,6 +50,7 @@
 					<% end %>
 				</div>
 			<% else %>
+				<!-- If the current user hasn't created any Chatboxes, show link -->
 				<div class="userChatsNone">
 					<h2>ChatBoxes you've created</h2>
 					<p> You haven't created any ChatBoxes! <%= link_to "Create one now", new_chatroom_path, :method => :get %> </p>
@@ -55,7 +60,7 @@
 	</body>
 
 <% else %>
-	
+	<!-- If user is not signed in, show landing page -->
 	<body class="landing signed-out-landing">
 		
 		<% flash.discard %>
@@ -76,6 +81,7 @@
 
 <% end %> 
 
+<!-- Load a random background image from array -->
 <script type="text/javascript">
  var images = [
  'https://images.unsplash.com/photo-1450098722705-562182a09e45?dpr=2&auto=format&fit=crop&w=1500&h=2256&q=80&cs=tinysrgb&crop=', 
