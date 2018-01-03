@@ -1,11 +1,14 @@
 <body class="user-page">
+	<!-- IF PROFILE BELONGS TO CURRENT USER -->
 	<% if current_user == @user_page %>
 		<h2> <%= @user_page.username %> </h2>
 		<%= image_tag(@user_page.avatar.url(:medium), :class => "center") %>
+		<!-- IF USER HASN'T UPLOADED AN AVATAR -->
 		<% if (@user_page.avatar.url == "/images/original/missing.png") %>
 			<div class="no-avatar-message">You haven't uploaded an avatar! <%= link_to 'Upload one here', edit_user_registration_path, :method => :get %> </div>
 		<% end %>
-	<% else %>
+	<!-- IF PROFILE BELONGS TO ANOTHER USER -->
+	<% else %> 
 		<h2> <%= @user_page.username %> </h2>
 		<%= image_tag(@user_page.avatar.url(:medium), :class => "center") %>
 	<% end %>
