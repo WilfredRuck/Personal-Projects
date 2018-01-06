@@ -1,16 +1,24 @@
 <div class="row nav">
+	
+	<!-- HOME BUTTON -->
 	<div class="col-xs-4"><%= button_to "Home", root_path, :method => :get, :class => "btn btn-primary nav-home" %>
 	</div>
-
+	
+	<!-- WEBSITE LOGO -->
 	<div class="col-xs-4"> 
 		<p class="logo"> <%= link_to "CHATBOX", root_path %> </p>
 	</div>
 	
+	<!-- DROPDOWN MENU -->
 	<div class="col-xs-4">
 	  <div class="nav-options">
-
+		
 	    <div class="dropdown">
+
+	      <!-- DROPDOWN BUTTON -->
 		  <button onclick="myFunction()" class="btn btn-primary dropbtn">Menu</button>
+
+		  <!-- DROPDOWN ITEMS -->
 		  <div id="myDropdown" class="dropdown-content dropdown-menu-right">
 		    <%= link_to "View Profile", "/users/#{current_user.username}", :method => :get %>
 		    <%= link_to "Edit Account", edit_user_registration_path, :method => :get %>
