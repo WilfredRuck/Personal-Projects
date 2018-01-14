@@ -1,9 +1,11 @@
 <body class="edit-account-page">
   <h2>Edit Account</h2>
-
+  
+  <!-- DEVISE EDIT USER ACCOUNT FORM -->
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
-
+    
+    <!-- USER CAN SUBMIT A PHOTO AS AN AVATAR -->
     <div class="form-group">
         <%= f.label :avatar %><br />
         <%= f.file_field :avatar %>
