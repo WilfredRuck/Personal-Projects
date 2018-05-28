@@ -25,7 +25,7 @@ class CodeController < ApplicationController
 	  	else
 	  		code = ''
 	  	end
-	end
+	  end
   end
 
   def new
