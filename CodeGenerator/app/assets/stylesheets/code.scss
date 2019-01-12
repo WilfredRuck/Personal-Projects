@@ -142,6 +142,38 @@ h1 {
 	padding-left: 98px;
 }
 
+
+.gen-code-section {
+  -webkit-animation: seconds 1.0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 5s;
+  animation: seconds 1.0s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 5s;
+  position: relative;
+    
+}
+@-webkit-keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -9999px; 
+    position: absolute;   
+  }
+}
+@keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -9999px;
+    position: absolute;     
+  }
+}
+
 // LIST OF CODES GENERATED
 
 .usedSection {
@@ -224,7 +256,7 @@ h1 {
 	to { box-shadow:0px 0px 20px 5px #bad433; }
 }
 
-// Flash Messages
+// Flash Messages and Errors
 
 div.field_with_errors {
 	display: inline;
