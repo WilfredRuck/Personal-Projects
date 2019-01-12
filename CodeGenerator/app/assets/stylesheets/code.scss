@@ -239,7 +239,7 @@ h1 {
 	font-size: 28px;
 	color: #bad433;
 	border: #fff 2px solid;
-	border-radius: 50%;
+	// border-radius: 50%;
 	padding: 15px;
 	display: inline;
 	position: fixed;
@@ -314,19 +314,19 @@ div.field_with_errors {
     	margin-bottom: 300px;
 			width: 90%;
 			text-align: center;
-    }
+		}
+		
+		#actual-code {
+			padding-left: 18%;
+		}
 
-    // .gen-button {
-    // 	width: 250px;
-    // }
-
-    #random-code {
-    	width: 250px;
-    }
+		.copy {
+			width: 20%;
+		}
 }
 
 @media screen and (max-width: 340px) {
-	.gen-button {
+	.gen-button, #random-code {
 		width: 200px;
 	}
 }
