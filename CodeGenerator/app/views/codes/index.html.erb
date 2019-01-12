@@ -3,18 +3,18 @@
 
 		<!-- IF A CODE WAS GENERATED... -->
 		<% if flash[:code] %>
-			<p id="success" value="#{flash[:success]}"> <%= flash[:success] %> </p>
-			<div id="random-code">
-				<div id="actual-code">
-					<%= flash[:code] %>
-				</div>
+		<div class="code-gen-section">
+				<p id="success" value="#{flash[:success]}"> <%= flash[:success] %> </p>
+				<div id="random-code">
+					<div id="actual-code">
+						<%= flash[:code] %>
+					</div>
 
-				<!-- COPY BUTTON FOR NEWLY GENERATED CODE -->
-				<button onclick="copyText('<%= flash[:code] %>')" class="copy">Copy</button>
-			</div>
-			
-			<!-- COPY NOTIFICATION -->
-			<div id="copied"></div>
+					<!-- COPY BUTTON FOR NEWLY GENERATED CODE -->
+					<button onclick="copyText('<%= flash[:code] %>')" class="copy">Copy</button>
+				</div>
+					<div id="copied"></div> <!-- COPY NOTIFICATION -->
+		</div>
 		<% end %>
 	
 	<!-- GENERATE CODE BUTTON -->

@@ -1,3 +1,50 @@
+// CSS RESET
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+// CUSTOM CSS STARTS HERE
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 body {
@@ -15,13 +62,14 @@ body {
 	flex-direction: column;
 	border: #fff 2px solid;
 	background-color: #0a0a00;
-	padding-bottom: 45px;
+	padding: 45px 0px;
 	margin-top: 50px;
 }
 
 h1 {
 	font-size: 45px;
 	color: white;
+	margin-bottom: 30px;
 }
 
 .button {
@@ -47,17 +95,15 @@ h1 {
 	border: none;
 	float: right;
 	padding-top: 15px;
-	padding-bottom: 15px;
-	padding-right: 8px;
-	padding-left: 10px;
-	outline: none;
+	padding-bottom: 16px;
+	width: 20%;
 }
 
 .copy:hover {
 	color: #fff;
-  -webkit-transition: all 50ms linear;
-  transition: all 50ms linear;
-  cursor: pointer; 
+	cursor: pointer; 
+	-webkit-transition: all 100ms;
+	transition: all 100ms ;
 }
 
 .copy2 {
@@ -70,30 +116,30 @@ h1 {
 
 .copy2:hover {
 	color: #fff;
-  -webkit-transition: all 50ms linear;
-  transition: all 50ms linear;
-  cursor: pointer; 
+	cursor: pointer;
+	-webkit-transition: all 100ms;
+	transition: all 100ms ; 
 }
 
 #copied {
 	color: white;
-	padding-bottom: 10px;
+	margin-bottom: 10px;
+	text-align: center;
 }
 
 #random-code {
-	display: inline-block;
 	margin-bottom: 15px;
-	width: 300px;
+	width: 298px;
 	font-weight: bolder;
 	border: #bad433 2px solid;
+	border-right: none;
 }
 
 #actual-code {
 	display: inline-block;
 	color: white;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 40px;
+	padding: 14px 10px;
+	padding-left: 98px;
 }
 
 // LIST OF CODES GENERATED
@@ -186,9 +232,11 @@ div.field_with_errors {
 }
 
 #success {
-	color: red;
+	color: #bad433;
 	font-size: 14px;
 	font-weight: bolder;
+	padding-bottom: 10px;
+	text-align: center;
 }
 
 // MEDIA QUERIES
