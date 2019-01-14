@@ -11,10 +11,12 @@ function copyText(code) {
 	
 }
 
-function copyText2(code, el) {
-	clipboard.writeText(code);
-	el.innerText = 'Copied!';
-	setTimeout(() => {
-		el.innerText = code;
-	}, 2000);
-}
+// function copyText2(code, el) {
+// 	clipboard.writeText(code);
+// 	el.innerText = 'Copied!';
+// 	debugger
+// 	setTimeout(() => {
+// 		debugger
+// 		el.innerText = code;
+// 	}, 2000);
+// }
